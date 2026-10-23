@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+HOST="${NOVAROBOT_WIFI_HOST:-127.0.0.1}"
+PORT="${NOVAROBOT_WIFI_PORT:-18080}"
+
+usage() {
+  cat <<'EOF'
+NovaRobot-wifi status
+NovaRobot-wifi discover
+NovaRobot-wifi scan
+NovaRobot-wifi provision <ssid> <password>
+NovaRobot-wifi mode ap|sta
+NovaRobot-wifi udp
+EOF
+}
+
+case "${1:-}" in
+  status|discover)
+    curl -sS "http://${HOST}:${PORT}/status" | python3 -m json.tool
+    ;;
+  scan)
+    curl -sS "http://${HOST}:${PORT}/api/wifi/scan" | python3 -m json.tool
+    ;;
+  provision)
+    curl -sS -X POST "http://${HOST}:${PORT}/api/wifi" \
+      -H 'Content-Type: application/json' \
+      -d "{\"ssid\":\"${2:-}\",\"password\":\"${3:-}\"}" | python3 -m json.tool
+    ;;
+  mode)
+    curl -sS -X POST "http://${HOST}:${PORT}/api/mode" \
+      -H 'Content-Type: application/json' \
+      -d "{\"mode\":\"${2:-}\"}" | python3 -m json.tool
+    ;;
+  udp)
+    python3 - <<'PY'
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+s.settimeout(2)
+s.sendto(b"NOVAROBOT_DISCOVER", ("127.0.0.1", 53535))
+print(s.recvfrom(4096)[0].decode())
+PY
+    ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac

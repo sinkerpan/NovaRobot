@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "ssid": "@Tenda_592DE0_5G",
+      "priority": 30,
+      "source": "provisioned"
+    },
+    {
+      "ssid": "iPhone 14 Pro",
+      "priority": 30,
+      "source": "provisioned",
+      "has_password": true
+    },
+    {
+      "ssid": "Iphone 14 Pro",
+      "priority": 30,
+      "source": "provisioned",
+      "has_password": true
+    },
+    {
+      "ssid": "HUAWEI-XEZMDA_5G",
+      "priority": 30,
+      "source": "provisioned",
+      "has_password": true
+    },
+    {
+      "ssid": "HUAWEI-XEZMDA",
+      "priority": 10,
+      "source": "imported",
+      "kind": "home"
+    },
+    {
+      "ssid": "TP-LINK_4C95",
+      "priority": 10,
+      "source": "imported",
+      "kind": "home"
+    },
+    {
+      "ssid": "iPhone",
+      "priority": 5,
+      "source": "imported",
+      "kind": "hotspot"
+    },
+    {
+      "ssid": "iQOO Neo5",
+      "priority": 5,
+      "source": "imported",
+      "kind": "hotspot"
+    },
+    {
+      "ssid": "Redmi K40S",
+      "priority": 5,
+      "source": "imported",
+      "kind": "hotspot"
+    }
+  ],
+  "preferred_ssid": "HUAWEI-XEZMDA_5G"
+}

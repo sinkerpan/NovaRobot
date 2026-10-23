@@ -1,0 +1,8 @@
+{
+  "device": "NovaRobot TR One",
+  "id": "NovaRobot-0000",
+  "ap_ssid": "NovaRobot-0000",
+  "mac": "00:00:00:00:00:00",
+  "mdns": "novarobot-0000.local",
+  "firmware": "1.0.0"
+}
