@@ -243,7 +243,32 @@ ros2 launch app_server app_bridge.launch.py
 
 ---
 
-## 11. 备注
+## 11. 联系方式与刷机镜像获取
+
+如果需要获取刷机镜像、加入技术交流群或获取最新固件信息，请按下面方式联系：
+
+> 扫码添加我为好友，加入群后即可获取刷机镜像与更新说明。
+
+<div align="center">
+  <div style="display:flex; align-items:center; justify-content:center; gap:24px; margin: 32px 0 12px;">
+    <div style="width:86px; height:86px; border-radius:14px; background:linear-gradient(135deg,#0f1520,#272f3a); box-shadow:0 4px 10px rgba(0,0,0,.15); position:relative;">
+      <div style="position:absolute; left:18px; top:20px; width:50px; height:46px; border-radius:10px; background:#d2d8df; opacity:.72;"></div>
+      <div style="position:absolute; left:26px; top:38px; width:30px; height:8px; border-radius:999px; background:#0f1520; opacity:.8;"></div>
+    </div>
+    <div style="text-align:left;">
+      <div style="font-size:28px; font-weight:700; color:#1f1f1f; font-family: 'Segoe UI', Arial, sans-serif;">sinkerpanda</div>
+      <div style="font-size:20px; color:#6d6d6d; margin-top:6px; font-family: 'Segoe UI', Arial, sans-serif;">广东 深圳</div>
+    </div>
+  </div>
+
+  <img src="添加微信获取刷机镜像.jpg" alt="添加微信获取刷机镜像" width="420" />
+
+  <div style="font-size:28px; font-weight:600; color:#2f2f2f; margin-top:8px; font-family: 'Segoe UI', Arial, sans-serif;">扫码加我，添加我为朋友。</div>
+</div>
+
+---
+
+## 12. 备注
 
 - 该工作区的配置和启动方式会随着硬件接线、IMU/LiDAR选择、launch 文件更新而调整。
 - 具体节点名称、topic 名称、参数字段可能因代码迭代发生变化。
